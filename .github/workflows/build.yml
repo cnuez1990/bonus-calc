@@ -1,0 +1,35 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches: [ "main" ] # Runs every time you push to main
+
+jobs:
+  build:
+    runs-on: windows-latest # GitHub provides a Windows virtual machine
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+        # Add other dependencies here if you add imports later
+
+    - name: Build EXE
+      run: |
+        pyinstaller --onefile --name "Bonus_Calc" bonus_calc.py
+        # Replace 'main.py' with the actual name of your entry script
+
+    - name: Upload Executable
+      uses: actions/upload-artifact@v4
+      with:
+        name: Bonus-Calculator-EXE
+        path: dist/Bonus_Calc.exe
