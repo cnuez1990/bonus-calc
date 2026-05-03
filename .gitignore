@@ -1,0 +1,12 @@
+# Ignore the generated bonus reports
+*.csv
+
+# Ignore Python cache and local environment files
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ignore PyInstaller build folders and metadata
+build/
+dist/
+*.spec
