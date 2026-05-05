@@ -1,13 +1,22 @@
-# Advisor Data Map: { "ID": {"name": "Name", "sales": Amount} }
+# Advisor Data Map:
 advisors_data = {
-    "2742": {"name": "Carlos", "sales": 75000},
-    "2769": {"name": "John", "sales": 55500},
-    "2611": {"name": "Steve", "sales": 60000},
-    "2850": {"name": "Mike", "sales": 53000}
+    "2742": "Carlos",
+    "2769": "John",
+    "2611": "Steve",
+    "2850": "Mike"
 }
 
 # Flexible Spiff Map
 spiff_map = {
+    "MB1": 5,
+    "MB2": 10,
+    "MB3": 15,
+    "MB4": 25,
+    "4WAC": 10
+}
+
+# Flexible Fluid Spiff Map
+fluid_map = {
     "MB1": 5,
     "MB2": 10,
     "MB3": 15,
